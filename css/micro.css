@@ -1,0 +1,7 @@
+div {
+    width: 200px;
+    height: 200px;
+    margin: 200px auto;
+    background-color: #ccc;
+    box-shadow: -102px -102px red, -102px 102px blue, 102px 102px green, 102px -102px yellow;
+}

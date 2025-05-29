@@ -1,0 +1,298 @@
+:root {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/* start game */
+
+.page .container {
+    margin-top: 50px;
+
+}
+
+.page .container .game {
+    display: flex;
+    gap: 35px;
+    background-color: white
+}
+
+
+.page .container .game .box1 {
+    padding: 20px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+
+.page .container .game .box1 img {
+    width: 250px;
+    height: 250px;
+    /* max-width: 100%; */
+    border-radius: 50%;
+    border: 5px solid #ccc;
+}
+
+.page .container .game .box1 h1 {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.page .container .game .box1 .progress {
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #f2f2f2;
+    position: relative;
+    overflow: hidden;
+}
+
+.page .container .game .box1 .progress::before {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    background-color: rgb(13 86 13 / 80%);
+}
+
+
+.page .container .game .box1 p span {
+    color: rgb(13 86 13 / 100%);
+
+}
+
+.page .container .game .box2 {
+    position: relative;
+    padding: 20px 0px;
+}
+
+.page .container .game .box2::before {
+    content: "140 Days in The Ship ";
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-weight: 300;
+}
+
+.page .container .game .box2 h2 {
+    margin: 0;
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+.page .container .game .box2 p {
+    line-height: 2;
+    font-size: 17px;
+    padding: 10px;
+    padding-left: 0;
+}
+
+@media (max-width:767px) {
+    .page .container .game {
+        flex-direction: column;
+    }
+
+    .page .container .game .box1 {
+        border-bottom: 1px solid #ccc;
+        border-right: 0px;
+    }
+
+    .page .container .game .box2 {
+        text-align: center;
+    }
+
+    .page .container .game .box2 p {
+        font-size: 17px;
+        padding: 15px;
+    }
+}
+
+/* end game */
+
+/* start Points */
+
+.points .container .content {
+    padding: 20px;
+    background-color: white;
+}
+
+.points .container .content h2 {
+    margin: 0;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(119 116 116);
+    width: fit-content;
+    margin-bottom: 25px;
+}
+
+.points .container .content .info p:not(:last-child) {
+    margin: 0;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.points .container .content .info p span:first-child {
+    color: green;
+}
+
+.points .container .content .info p span:last-child {
+    color: #f33333;
+}
+
+/* end Points */
+
+/* start trophes */
+
+.troph .container .box {
+    padding: 20px;
+    background-color: white;
+}
+
+.troph .container .box h2 {
+    margin: 0;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(119 116 116);
+    width: fit-content;
+    margin-bottom: 25px;
+}
+
+.troph .container .box .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 10px;
+}
+
+@media (max-width:767px) {
+    .troph .container .box .images {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+
+    }
+}
+
+.troph .container .box .images img {
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+}
+
+/* end trophes */
+
+/* start ladder */
+
+.ladder .container .box {
+    padding: 20px;
+    background-color: white;
+}
+
+.ladder .container .box h2 {
+    margin: 0;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(119 116 116);
+    width: fit-content;
+    margin-bottom: 25px;
+}
+
+.ladder .container .box p span:first-child {
+    color: red;
+}
+
+.ladder .container .box p span:last-child {
+    color: green;
+}
+
+/* end ladder */
+/* start power */
+
+.power .container .box {
+    padding: 20px;
+    background-color: white;
+}
+
+.power .container .box h2 {
+    margin: 0;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(119 116 116);
+    width: fit-content;
+    margin-bottom: 25px;
+}
+
+.power .container .box .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.power .container .box .info p {
+    margin: 0;
+}
+
+.power .container .box .info:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 20px;
+}
+
+.power .container .box .info span {
+    color: red;
+    font-weight: bold;
+}
+
+.power .container .box .info:first-of-type span,
+.power .container .box .info:nth-of-type(2) span,
+.power .container .box .info:nth-of-type(4) span,
+.power .container .box .info:nth-of-type(6) span {
+    color: Green;
+    font-weight: bold;
+}
+
+@media (max-width:767px) {
+    .power .container .box .info {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+/* end power */

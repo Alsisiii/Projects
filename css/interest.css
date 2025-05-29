@@ -1,0 +1,112 @@
+:root {
+    --main-purple-color: #5c48f1;
+    --elements-background-color: #eeecfd;
+    --element-border-color: #e0e0e1;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.page {
+    padding: 100px;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    width: 978px;
+    transform: translateY(50%);
+    padding-left: 100px;
+}
+
+@media (max-width:767px) {
+    .page {
+        width: 250px;
+        padding: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        transform: translateY(0);
+    }
+}
+
+.page .box {
+    width: 225px;
+    text-align: center;
+    position: relative;
+    border: 3px solid var(--element-border-color);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.page .box div:first-child {
+    position: absolute;
+}
+
+
+
+.page .box div label::before {
+    content: " ";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    left: 5px;
+    top: 5px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.page .box div label::after {
+    content: " ";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 2px;
+    top: 8px;
+    left: 8px;
+    transition: 0.3s;
+}
+
+.page .box div .check-box {
+    appearance: none;
+    -webkit-appearance: none;
+    display: none;
+
+}
+
+.page .box div .check-box:checked~label::before,
+.page .box div .check-box:not(:checked):hover~label::before {
+    border-color: var(--main-purple-color);
+}
+
+.page .box div .check-box:checked~label::after {
+    background-color: var(--main-purple-color);
+}
+
+.page .box div .check-box:not(:checked):hover~label::after {
+    background-color: rgb(92 72 241 / 20%);
+}
+
+.page .box:has(div .check-box:checked) {
+    border-color: var(--main-purple-color);
+    background-color: rgb(92 72 241 / 10%);
+}
+
+.page .box div:last-child {
+    padding: 40px;
+}
+
+.page .box i {
+    color: var(--main-purple-color);
+    font-size: 75px;
+
+}
+
+.page .box span {
+    margin-top: 10px;
+    font-size: 20px;
+    display: block;
+}

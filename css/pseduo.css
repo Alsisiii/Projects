@@ -1,0 +1,141 @@
+/*  */
+.page .circle {
+    width: 250px;
+    padding: 30px;
+}
+
+.page .circle .content {
+    margin-bottom: 20px;
+}
+
+.page .circle .content .title {
+    color: blue;
+    margin-bottom: 15px;
+}
+
+.page .circle .content span {
+    width: 100%;
+    display: block;
+    height: 2px;
+    background: #f2f2f2;
+    position: relative;
+}
+
+.page .circle .content span::before {
+    content: " ";
+    position: absolute;
+    width: 50%;
+    background-color: blue;
+    height: 100%;
+}
+
+.page .circle .content span::after {
+    content: " ";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: blue;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.page .circle .content:nth-of-type(2) .title {
+    color: red;
+}
+
+.page .circle .content:nth-of-type(2) span::before,
+.page .circle .content:nth-of-type(2) span::after {
+    background: red;
+    border-color: transparent transparent red transparent;
+}
+
+/*  */
+.page .circle .content:nth-of-type(3) .title {
+    color: green;
+
+}
+
+.page .circle .content:nth-of-type(3) span::before,
+.page .circle .content:nth-of-type(3) span::after {
+    background: green;
+    border-color: transparent transparent green transparent;
+
+
+}
+
+/*  */
+.page .circle .content:nth-of-type(4) .title {
+    color: orange;
+
+}
+
+.page .circle .content:nth-of-type(4) span::before,
+.page .circle .content:nth-of-type(4) span::after {
+    background: orange;
+    border-color: transparent transparent orange transparent;
+
+}
+
+/*  */
+/* box */
+.page .circle:nth-child(2) span::after {
+    content: " ";
+    position: absolute;
+    border-radius: 0;
+}
+
+/* Triangle up */
+.page .circle:nth-child(3) span::after {
+    content: " ";
+    position: absolute;
+    border-radius: 0;
+    content: " ";
+    position: absolute;
+    border-radius: 0;
+    background-color: transparent;
+    border: 10px solid;
+    border-color: transparent transparent blue transparent;
+    top: -9px;
+    width: 0;
+    height: 0;
+}
+
+.page .circle:nth-child(3) .content:nth-of-type(3) span::after,
+.page .circle:nth-child(3) .content:nth-of-type(4) span::after,
+.page .circle:nth-child(3) .content:nth-of-type(2) span::after,
+.page .circle:nth-child(4) .content:nth-of-type(3) span::after,
+.page .circle:nth-child(4) .content:nth-of-type(4) span::after,
+.page .circle:nth-child(4) .content:nth-of-type(2) span::after {
+    background: transparent;
+
+}
+
+/* triangle down */
+.page .circle:nth-child(4) span::after {
+    content: " ";
+    content: " ";
+    position: absolute;
+    border-radius: 0;
+    background-color: transparent;
+    border: 10px solid;
+    border-color: blue transparent transparent transparent;
+    top: 11px;
+    width: 0;
+    height: 0;
+}
+
+.page .circle:nth-child(4) .content:nth-of-type(2) span::after {
+    border-color: red transparent transparent transparent;
+
+}
+
+.page .circle:nth-child(4) .content:nth-of-type(3) span::after {
+    border-color: green transparent transparent transparent;
+
+}
+
+.page .circle:nth-child(4) .content:nth-of-type(4) span::after {
+    border-color: orange transparent transparent transparent;
+
+}

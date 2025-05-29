@@ -1,0 +1,112 @@
+:root {
+    --blue-color: rgb(3, 169, 244);
+    --black-color: rgb(36, 36, 36);
+    --dark_colo: #2a2a2a;
+    --grey-color: #4e5351;
+}
+
+.page {
+    margin: 30px;
+    font-family: sans-serif;
+    display: flex;
+}
+
+@media (max-width:767px) {
+    .page {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+}
+
+.page .box {
+    width: 300px;
+    text-align: center;
+    background-color: var(--black-color);
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: 0.3s;
+    border-right: 1px solid white;
+}
+
+.page .box:hover,
+.page .box:hover .info span:nth-child(2),
+.page .box:hover .info span:nth-child(4),
+.page .box:hover .info span {
+    background-color: var(--blue-color);
+    border-color: #ccc;
+    color: white;
+}
+
+.page .box:hover {
+    transform: scale(1.06)
+}
+
+.page .box h3 {
+    font-size: 30px;
+}
+
+.page .box .price {
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 30px;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+.page .box .price::before {
+    content: "$";
+    position: absolute;
+    left: -10px;
+    top: -4px;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.page .box .price::after {
+    content: "/ mo";
+    position: absolute;
+    font-size: 15px;
+    bottom: 33px;
+    right: -30px;
+    font-weight: normal;
+}
+
+
+.page .box .info span {
+    display: block;
+    padding: 20px;
+    color: var(--grey-color);
+    border-top: 1px solid var(--grey-color);
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.page .box .info span:nth-child(2),
+.page .box .info span:nth-child(4) {
+    background-color: var(--dark_colo);
+    transition: 0.3s;
+}
+
+.page .box .button {
+    padding: 10px 20px;
+    border: 1px solid white;
+    width: fit-content;
+    margin: 30px auto;
+}
+
+@media (min-width:767px) {
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .page .box {
+        height: 500px;
+    }
+
+}

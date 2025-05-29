@@ -1,0 +1,126 @@
+body {
+    background-color: #f2f2f2;
+    font-family: sans-serif;
+}
+
+.page {
+    padding: 20px 60px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+
+.page .box {
+    width: 260px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.page .box:nth-child(2) div:first-of-type {
+    background-color: orange;
+}
+
+.page .box h1 {
+    font-size: 40px;
+    font-weight: normal;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    position: relative;
+}
+
+.page .box h1::before {
+    content: "$";
+    position: absolute;
+    font-size: 22px;
+    left: -14px;
+}
+
+.page .box div:first-of-type {
+    position: relative;
+    color: white;
+    background-color: rgb(34 139 34 / 80%);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 91px;
+    position: relative;
+    left: -30px;
+}
+
+.page .box div:first-of-type::before {
+    content: " ";
+    position: absolute;
+    border: 5px solid;
+    border-color: transparent green green transparent;
+    top: -10px;
+    left: 0px;
+}
+
+.page .box .info {
+    margin-top: 40px;
+}
+
+.page .box .info span {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.page .box .button {
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+.page .box .button a {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(34 139 34 / 80%);
+    padding: 10px 20px;
+    font-size: 17px;
+    border-radius: 5px;
+
+}
+
+.page .box:nth-child(2) {
+    transform: translateY(30px);
+}
+
+.page .box:nth-child(2) div:first-of-type,
+.page .box:nth-child(2) .button a {
+    background-color: rgb(255 165 0 / 80%);
+}
+
+.page .box:nth-child(2) div:first-of-type::before {
+    border-color: transparent #d18802 #d18802 transparent;
+}
+
+.page .box:last-child {
+    transform: translateY(60px);
+
+}
+
+.page .box:last-child div:first-of-type,
+.page .box:last-child .button a {
+    background-color: rgb(136, 54, 213);
+}
+
+.page .box:last-child div:first-of-type::before {
+    border-color: transparent #400577 #400577 transparent;
+}
+
+@media (max-width:767px) {
+    .page {
+        margin-bottom: 20px;
+        padding: 20px;
+        gap: 20px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
